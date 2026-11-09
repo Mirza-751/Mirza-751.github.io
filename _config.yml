@@ -1,0 +1,16 @@
+# Site settings for GitHub Pages (Jekyll 3.10 via the github-pages gem; no theme, no extra plugins).
+title: Laraib Mustafa Mirza
+url: https://mirza-751.github.io
+baseurl: ""
+lang: en
+
+# github-pages applies its Primer theme when none is set; this site uses its own hand-written CSS
+theme: null
+
+# never publish the local build tools
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

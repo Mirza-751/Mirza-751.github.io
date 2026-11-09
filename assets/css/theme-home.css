@@ -1,0 +1,38 @@
+/* Homepage theme: Source Serif 4 + Inter, warm off-white with a navy accent. Overrides tokens only. */
+:root {
+  --f-display: "Source Serif 4", Georgia, serif;
+  --f-body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-body: 16px;
+  --lh-body: 1.65;
+
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --fg: #1b1d22;
+  --muted: #4d5461;
+  --border: #e5e2db;
+  --accent: #1f4e8c;
+  --accent-soft: #e8eef7;
+  --tag: #f2f0ea;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111319;
+    --surface: #191c24;
+    --fg: #e7e8eb;
+    --muted: #9ba2ae;
+    --border: #2a2e39;
+    --accent: #8fb4ec;
+    --accent-soft: #1e293b;
+    --tag: #222632;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111319;
+  --surface: #191c24;
+  --fg: #e7e8eb;
+  --muted: #9ba2ae;
+  --border: #2a2e39;
+  --accent: #8fb4ec;
+  --accent-soft: #1e293b;
+  --tag: #222632;
+}

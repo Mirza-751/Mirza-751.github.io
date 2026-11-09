@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html theme="home" %}
+</head>
+<body>
+{%- unless page.bare %}
+<a class="skip" href="#main">Skip to content</a>
+
+{% include header.html %}
+{%- endunless %}
+
+{{ content }}
+{%- unless page.bare %}
+
+{% include footer.html %}
+
+<script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+{%- for js in page.scripts %}
+<script src="{{ js | relative_url }}"></script>
+{%- endfor %}
+{%- endunless %}
+</body>
+</html>

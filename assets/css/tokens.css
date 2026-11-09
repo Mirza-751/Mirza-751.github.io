@@ -1,0 +1,59 @@
+/* Design tokens shared by the whole site.
+   The two themes, theme-home.css (the homepage) and theme-sim.css (the simulations), only override these. */
+:root {
+  /* spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 56px;
+  --space-9: 72px;
+
+  /* corner radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-pill: 999px;
+
+  /* type scale */
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-md: 14px;
+  --fs-body: 16px;
+  --fs-lead: 18px;
+  --lh-body: 1.6;
+
+  /* font families */
+  --f-display: Georgia, "Times New Roman", serif;
+  --f-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* colour roles */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --fg: #1b1d22;
+  --muted: #5b6270;
+  --accent: #1f4e8c;
+  --border: #e5e2db;
+
+  /* the physical processes, one colour each: the signature shared by the homepage and the simulations.
+     Use them for lines, fills and swatches; text stays in --fg / --muted for contrast. */
+  --c-sync: #C98A0B;       /* synchrotron */
+  --c-compton: #7A3FB0;    /* inverse Compton */
+  --c-disk: #2F6FD6;       /* accretion disc */
+  --c-blr: #2E9A5A;        /* broad-line region */
+  --c-torus: #C2412D;      /* dusty torus */
+  --c-field: #5E7F96;      /* magnetic field */
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-sync: #E8B44A; --c-compton: #C79BF2; --c-disk: #6FA6FF; --c-blr: #5FCB8C; --c-torus: #FF7A63; --c-field: #7FA3BC;
+  }
+}
+:root[data-theme="dark"] {
+  --c-sync: #E8B44A; --c-compton: #C79BF2; --c-disk: #6FA6FF; --c-blr: #5FCB8C; --c-torus: #FF7A63; --c-field: #7FA3BC;
+}

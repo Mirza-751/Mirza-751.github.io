@@ -1,0 +1,15 @@
+{%- comment -%} Site footer. variant="sim": the simulations' footer, with page.series and page.footer_note. {%- endcomment -%}
+{%- if include.variant == 'sim' -%}
+<footer>
+    <span><strong>Laraib Mustafa Mirza</strong> · {{ page.series | default: "Interactive notes on blazar jets" }}</span>
+    {%- if page.footer_note %}
+    <span>{{ page.footer_note }}</span>
+    {%- endif %}
+  </footer>
+{%- else -%}
+<footer>
+  <div class="wrap">
+    <span>© 2026 Laraib Mustafa Mirza</span>
+  </div>
+</footer>
+{%- endif -%}

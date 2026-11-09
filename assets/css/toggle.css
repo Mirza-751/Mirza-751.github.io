@@ -1,0 +1,15 @@
+/* The dark-mode button, the same on every page. Colours come from the page's theme. */
+.theme-btn {
+  flex: none; width: 34px; height: 34px; margin-left: 10px; border-radius: var(--radius-md);
+  border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+  display: grid; place-items: center; cursor: pointer;
+}
+.theme-btn:hover { color: var(--fg); border-color: var(--accent); }
+.theme-btn svg { width: 16px; height: 16px; }
+.icon-sun { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+:root[data-theme="dark"] .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .icon-moon { display: none; }
+}

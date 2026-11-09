@@ -1,0 +1,49 @@
+{%- comment -%} Research: the M.Sc. thesis. {%- endcomment -%}
+<section id="research">
+  <div class="section-head">
+    <h2>Research</h2>
+  </div>
+
+  <article class="card thesis">
+    <p class="meta">Master's thesis, University of Padua, October 2026</p>
+    <h3>Jet physics of MG3 J163554+3629 and its impact on supermassive black hole evolution in the early universe</h3>
+    <p class="meta">Supervisor: Prof. Eugenio Bottacini. Co-supervisor: Dr. Andrea Tramacere.</p>
+
+    <div class="thesis-cols">
+      <div class="thesis-text">
+        <p>
+          Blazars point their jets at us, so they are bright enough to see at high redshift and let us study black holes in the
+          first billion years. I modelled the broadband SED of MG3 J163554+3629, one of the most distant blazars detected by
+          Fermi-LAT, adding recent NuSTAR hard X-ray data. I used a one-zone leptonic model in JetSeT over a grid of accretion
+          efficiencies η = 0.057–0.3, which covers black-hole spins from a = 0 to near-maximal.
+        </p>
+        <ul class="findings">
+          <li>Black-hole mass M<sub>BH</sub> ≈ 1.8 × 10⁹ M<sub>⊙</sub> and Eddington ratio λ ≈ 0.08, for an inner disk radius of 8 R<sub>S</sub>.</li>
+          <li>The NuSTAR band is a mix of synchrotron self-Compton and external Compton emission. The γ-rays come from Compton scattering of dusty-torus photons.</li>
+          <li>The jet is particle-dominated and carries more power than the disk radiates.</li>
+          <li>Constant growth at the observed rate needs a seed of ≳ 10⁷ M<sub>⊙</sub> at z = 30, heavier than any direct-collapse seed. The black hole must have had an earlier phase of faster accretion at low radiative efficiency.</li>
+        </ul>
+        <div class="tags"><span>JetSeT</span><span>Fermi-LAT</span><span>NuSTAR</span><span>Minuit</span><span>MCMC (emcee)</span><span>UltraNest</span><span>SMBH growth</span></div>
+        <div class="links">
+          <a class="btn" href="https://github.com/Mirza-751/MG3-J163554-3629-SED-Modelling">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+            Code &amp; notebooks
+          </a>
+        </div>
+      </div>
+
+      <div class="figs">
+        <figure>
+          <a href="{{ '/assets/' | relative_url }}mg3_sed_fit.png"><img src="{{ '/assets/' | relative_url }}mg3_sed_fit.png" width="1100" height="843" alt="Broadband SED of MG3 J163554+3629 from radio to gamma rays, with synchrotron, SSC, external Compton, disk and torus components of the best-fit model and fit residuals" loading="lazy"></a>
+          <figcaption><b>SED fit.</b> Data from radio to γ-rays with the MCMC posterior-median model (η = 1/12) split into emission components, with residuals below.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <figure class="fig-side">
+      <a href="{{ '/assets/' | relative_url }}mg3_bh_growth.png"><img src="{{ '/assets/' | relative_url }}mg3_bh_growth.png" width="859" height="994" alt="Black-hole mass against time since the Big Bang for each accretion efficiency, compared with Population III and heavy seed mass ranges" loading="lazy"></a>
+      <figcaption><b>Growth histories.</b> Mass traced back to z = 30 for each η, at the observed Eddington ratio (solid) and at the Eddington limit (dashed), compared with seed models.</figcaption>
+    </figure>
+  </article>
+
+</section>

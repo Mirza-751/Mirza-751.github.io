@@ -1,0 +1,32 @@
+/* The site navigation, the same on every page (homepage-style pages and the simulations).
+   Colours and fonts come from the page's theme. On the simulations it is not sticky, so it never covers their sticky control panels. */
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+nav .nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left, 0px)); display: flex; align-items: center; height: 56px; gap: 8px; }
+nav a { text-decoration: none; }
+nav .name { font-family: var(--f-display); font-size: 17px; font-weight: 600; color: var(--fg); white-space: nowrap; margin-right: auto; }
+nav .name:hover { text-decoration: none; }
+nav .menu { display: flex; gap: 18px; overflow-x: auto; scrollbar-width: none; }
+nav .menu::-webkit-scrollbar { display: none; }
+nav .menu a { color: var(--muted); font-size: 14px; white-space: nowrap; text-decoration: none; }
+nav .menu a:hover { color: var(--fg); text-decoration: none; }
+.menu-btn { display: none; flex: none; height: 34px; padding: 0 12px; border-radius: var(--radius-md); border: 1px solid var(--border);
+  background: var(--surface); color: var(--fg); font: 500 14px var(--f-body); align-items: center; gap: 8px; cursor: pointer; }
+.menu-btn svg { width: 16px; height: 16px; }
+@media (max-width: 760px) {
+  .menu-btn { display: inline-flex; }
+  nav .menu { display: none; position: absolute; top: 56px; left: 0; right: 0; flex-direction: column; gap: 0;
+    background: var(--bg); border-bottom: 1px solid var(--border); padding: 6px max(16px, env(safe-area-inset-left, 0px)) 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .06); }
+  nav.open .menu { display: flex; }
+  nav .menu a { font-size: 16px; padding: 11px 0; border-bottom: 1px solid var(--border); color: var(--fg); }
+  nav .menu a:last-child { border-bottom: 0; }
+}
+
+nav.on-sim { position: static; }
+nav.on-sim .nav-inner { max-width: 1180px; }
+nav.on-sim .name { font-style: italic; font-weight: 500; font-size: 19px; }

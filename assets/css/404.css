@@ -1,0 +1,8 @@
+/* The 404 page: one centred message. */
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--fg);
+       font: var(--fs-body)/var(--lh-body) var(--f-body); padding: 16px; box-sizing: border-box; }
+main { max-width: 520px; text-align: center; }
+h1 { font-family: var(--f-display); font-size: 40px; margin: 0 0 8px; }
+p { color: var(--muted); margin: 0 0 24px; }
+a { display: inline-block; padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid var(--accent);
+    background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 500; }
