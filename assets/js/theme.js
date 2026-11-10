@@ -1,4 +1,3 @@
-// dark-mode button: switch theme and remember the choice
 (function () {
   var btn = document.getElementById('theme-btn');
   if (!btn) return;
@@ -8,6 +7,6 @@
                                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
     root.dataset.theme = dark ? 'light' : 'dark';
     try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
-    document.dispatchEvent(new Event('themechange'));     // the simulations redraw their canvases
+    document.dispatchEvent(new Event('themechange'));
   });
 })();

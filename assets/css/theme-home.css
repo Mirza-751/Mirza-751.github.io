@@ -1,4 +1,3 @@
-/* Homepage theme: Source Serif 4 + Inter, warm off-white with a navy accent. Overrides tokens only. */
 :root {
   --f-display: "Source Serif 4", Georgia, serif;
   --f-body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;

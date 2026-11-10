@@ -1,4 +1,3 @@
-// phone menu: open and close, close after choosing a section or pressing Escape
 (function () {
   var nav = document.querySelector('nav'), mb = document.getElementById('menu-btn');
   if (!mb) return;

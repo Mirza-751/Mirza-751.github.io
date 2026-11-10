@@ -1,5 +1,3 @@
-/* The site navigation, the same on every page (homepage-style pages and the simulations).
-   Colours and fonts come from the page's theme. On the simulations it is not sticky, so it never covers their sticky control panels. */
 nav {
   position: sticky; top: 0; z-index: 10;
   background: color-mix(in srgb, var(--bg) 90%, transparent);

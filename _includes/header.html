@@ -1,6 +1,3 @@
-{%- comment -%}
-  Site navigation, the same on every page. variant="sim" marks it for the simulations (not sticky there, see nav.css).
-{%- endcomment -%}
 {%- if page.url == '/' %}{% assign home = '' %}{% else %}{% assign home = '/' | relative_url %}{% endif -%}
 <nav aria-label="Main"{% if include.variant == 'sim' %} class="on-sim"{% endif %}>
   <div class="nav-inner">

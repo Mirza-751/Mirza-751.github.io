@@ -1,5 +1,3 @@
-/* Design tokens shared by the whole site.
-   The two themes, theme-home.css (the homepage) and theme-sim.css (the simulations), only override these. */
 :root {
   /* spacing */
   --space-1: 4px;
@@ -40,8 +38,6 @@
   --accent: #1f4e8c;
   --border: #e5e2db;
 
-  /* the physical processes, one colour each: the signature shared by the homepage and the simulations.
-     Use them for lines, fills and swatches; text stays in --fg / --muted for contrast. */
   --c-sync: #C98A0B;       /* synchrotron */
   --c-compton: #7A3FB0;    /* inverse Compton */
   --c-disk: #2F6FD6;       /* accretion disc */
