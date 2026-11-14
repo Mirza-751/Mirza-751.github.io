@@ -29,14 +29,19 @@ person_jsonld: true
 
 <main class="wrap" id="main">
 
-{% include research.html %}
-
-<section id="projects">
-  <div class="section-head">
-    <h2>Projects</h2>
-    <p>Here you can find some of my work.</p>
+<section class="overview">
+  <div class="grid">
+    <a class="card card-link" id="research" href="{{ '/research/' | relative_url }}">
+      <div class="thumb"><img src="{{ '/assets/' | relative_url }}mg3_sed_fit.png" width="1100" height="843" alt="Broadband SED fit of the z = 3.65 blazar MG3 J163554+3629" loading="lazy"></div>
+      <h3>Research</h3>
+      <p>My master's thesis: the jet of a z&nbsp;=&nbsp;3.65 blazar and what it says about early black-hole growth.</p>
+    </a>
+    <a class="card card-link" id="projects" href="{{ '/projects/' | relative_url }}">
+      <div class="thumb"><img src="{{ '/assets/' | relative_url }}qatar1b_transit.png" width="700" height="544" alt="Transit light curve of Qatar-1b with best-fit model and residuals" loading="lazy"></div>
+      <h3>Projects</h3>
+      <p>Here you can find some of my work.</p>
+    </a>
   </div>
-  <div class="links"><a class="btn" href="{{ '/projects/' | relative_url }}">All projects</a></div>
 </section>
 
 {% include about.html %}

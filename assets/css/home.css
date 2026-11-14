@@ -52,7 +52,10 @@ h3 { font-size: 20px; font-weight: 600; margin: 0 0 6px; }
 .tags span { background: var(--tag); color: var(--muted); font-size: 12px; padding: 2px 8px; border-radius: var(--radius-sm); }
 .card .links { margin-top: 18px; }
 
-#research { border-top: 0; }
+.overview { border-top: 0; padding-top: 0; }
+
+.card-link { color: inherit; }
+.card-link:hover { text-decoration: none; border-color: var(--accent); }
 
 .thesis-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 8px; }
 @media (min-width: 900px) { .thesis-cols { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; } }
